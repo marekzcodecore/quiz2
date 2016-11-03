@@ -1,0 +1,32 @@
+<h1> Support requests </h1>
+
+
+
+
+<table>  
+<table border="1">                       
+  <tr>                          
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th>Department</th>
+    <th>Actions</th>
+  </tr>
+<% @requests.each do |r| %>      
+  <tr>
+    <td><%= r.name %></td>       
+    <td><%= r.email %></td>      
+    <td><%= r.message %></td>  
+    <td><%= r.department %></td>
+    <td><%= link_to 'edit', edit_request_path(r) %> <%= link_to 'delete',
+				    request_path(r), method: :delete,
+		   		    data: { confirm: 'Are you sure?'} %>  </td>
+  </tr>
+<% end %>                       
+</table> 
+
+
+
+
+
+

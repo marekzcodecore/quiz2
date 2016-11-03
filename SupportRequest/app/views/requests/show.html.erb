@@ -1,0 +1,26 @@
+<h1> Support request </h1>
+
+ <table border="1">
+	     
+	  <tr>
+
+		<label for="name">Name</label>  
+		<td id="name"> <%= @request.name %>   </td>
+		<label for="email">Email</label>  
+		<td id="email"> <%= @request.email %>  </td>
+		<label for="message">message</label>  
+		<td id="message"> <%= @request.message %>  </td>
+		<label for="department">department</label>  
+		<td id="department"> <%= @request.department %> <%#= "hi" %> </td>
+	  </tr> 
+
+</table>
+
+
+<%#= link_to 'edit', edit_request_path(@request) %>
+
+<%#= link_to 'delete', request_path(@request),
+		      method: :delete,
+		      data: { confirm: 'Are you sure?'} %>
+
+<%#= link_to 'done', done_request_path(@request) %>

@@ -1,0 +1,37 @@
+
+<!-- label for="name">Name</label> 
+<label for="email">Email</label> 
+<label for="message">message</label> 
+<label for="department">department</label> 
+
+<% @requests.each do |r| %>
+ <table border="1">
+	     
+	  <tr>
+
+		 
+		<td id="name" > <%= r.name %>   </td>
+		 
+		<td id="email"> <%= r.email %>  </td>
+		 
+		<td id="message"> <%= r.message %>  </td>
+	 
+		<td id="department"> <%= r.department %> </td>
+		<td id="Actions">
+		<%= link_to 'edit', edit_request_path(r) %> <%= link_to 'delete',
+				    request_path(r), method: :delete,
+		   		    data: { confirm: 'Are you sure?'} %> </td>
+	  </tr> 
+
+</table>
+
+
+
+
+
+
+<%#= link_to 'done', done_request_path(@request) %>
+
+
+
+<% end % --> 
